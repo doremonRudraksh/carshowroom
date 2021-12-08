@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dubain Car Showroom Website</title>
+        <link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet"><meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+        <link rel="stylesheet" href="login.css">
+    </head>
+    <body style="text-align: center;">
+        <h1>About Cars</h1>
+        <h2 id="user_name"></h2>
+        <hr>
+        <h3>Cars of Toyota</h3>
+        <hr>
+        <img style="width: 700px; height: 400px;" src="https://ymimg1.b8cdn.com/resized/car_model/6185/logo/slide_show_2020_corolla_logo.png">
+        <h4>Toyota Corola</h4>
+        <button class="btn btn-warning" onclick="moreAboutCorola()">More about Corola</button>
+        <br>
+        <img style="width: 700px; height: 400px;" src="https://ymimg1.b8cdn.com/resized/car_model/6247/pictures/6205033/slide_show_HIAC_WG_1908-3005.jpg">
+        <h4>Toyota Granvia</h4>
+        <button class="btn btn-warning" onclick="moreAboutGranvia()">More about Granvia</button>
+        <br>
+        <img style="width: 700px; height: 400px;" src="https://ymimg1.b8cdn.com/resized/car_model/6198/logo/slide_show_supra.jpg">
+        <h4>Toyota Supra</h4>
+        <button class="btn btn-warning" onclick="moreAboutSupra()">More about Supra</button>
+        <br>
+        <img style="width: 700px; height: 400px;" src="https://ymimg1.b8cdn.com/resized/car_model/6290/logo/slide_show_2019_Toyota_Avalon.jpg">
+        <h4>Toyota Avalon</h4>
+        <button class="btn btn-warning" onclick="moreAboutAvalon()">More about Avalon</button>
+        <hr>
+        <h3>Cars of BMW</h3>
+        <hr>
+        <img style="width: 700px; height: 400px;" src="https://ymimg1.b8cdn.com/resized/car_model/7069/pictures/6779668/webp_slide_show_01.webp">
+        <h4>BMW M8 Convertible</h4>
+        <button class="btn btn-danger" onclick="moreAboutBmwM8Convertible()">More about BMW M8 Convertible</button>
+        <br>
+        <img style="width: 700px; height: 400px;" src="https://ymimg1.b8cdn.com/resized/car_model/7011/logo/webp_slide_show_01.webp">
+        <h4>BMW M8 Coupe</h4>
+        <button class="btn btn-danger" onclick="moreAboutBmwM8Coupe()">More about BMW M8 Coupe</button>
+        <br>
+        <img style="width: 700px; height: 400px;" src="https://ymimg1.b8cdn.com/resized/car_model/7068/pictures/6779290/webp_slide_show_01.webp ">
+        <h4>BMW M8 Gran Coupe</h4>
+        <button class="btn btn-danger" onclick="moreAboutBmwM8GranCoupe()">More about BMW M8  Gran Coupe</button>
+        <br>
+        <img style="width: 700px; height: 400px;" src="https://ymimg1.b8cdn.com/resized/car_model/6923/logo/webp_slide_show_13733_st1280_046.webp">
+        <h4>BMW X7</h4>
+        <button  class="btn btn-danger" onclick="moreAboutBmwX7()">More about BMW X7</button>
+        <hr>
+        <h3>Cars of Audi</h3>
+        <br>
+        <img style="width: 700px; height: 400px;" src="https://ymimg1.b8cdn.com/resized/car_model/7000/pictures/6213491/webp_slide_show_01.webp">
+        <h4>Audi SQ8</h4>
+        <button class="btn btn-info" onclick="moreAboutAudiSQ8()">More about Audi SQ8</button>
+        <br>
+        <img style="width: 700px; height: 400px;" src="https://ymimg1.b8cdn.com/resized/car_model/6903/logo/webp_slide_show_e-tron.webp">
+        <h4>Audi E-Tron</h4>
+        <button class="btn btn-info" onclick="moreAboutAudiETRON()">More about Audi E-Tron</button>
+        <br>
+        <img style="width: 700px; height: 400px;" src="https://ymimg1.b8cdn.com/resized/car_model/6477/logo/webp_slide_show_11694_st1280_046.webp">
+        <h4>Audi A3 Sedan</h4>
+        <button class="btn btn-info" onclick="moreAboutAudiA3Sedan()">More about Audi A3 Sedan</button>
+        <br>
+        <img style="width: 700px; height: 400px;" src="https://ymimg1.b8cdn.com/resized/car_model/7010/pictures/6213614/webp_slide_show_01.webp">
+        <h4>Audi E-Tron  Sportback</h4>
+        <button class="btn btn-info" onclick="moreAboutAudiETronSportback()">More about Audi E-Tron Sportback</button>
+        <hr>
+        <h3>Cars of Mercedes Benz</h3>
+        <hr>
+        <img style="width: 700px; height: 400px;" src="https://ymimg1.b8cdn.com/resized/car_model/6224/pictures/6204578/webp_listing_main_eqv.webp">
+        <h4>The Mercedes-Benz EQV</h4>
+        <button class="btn btn-success" onclick="moreAboutTheMercedesBenzEQV()">More about The Mercedes-Benz EQV</button>
+        <br>
+        <img style="width: 700px; height: 400px;" src="https://ymimg1.b8cdn.com/resized/car_model/6227/logo/mobile_listing_main_01.jpg">
+        <h4>The Mercedes-Benz GLB</h4>
+        <button class="btn btn-success" onclick="moreAboutTheMercedesBenzGLB()">The Mercedes-Benz GLB</button>
+        <br>
+        <img style="width: 700px; height: 400px;" src="https://ymimg1.b8cdn.com/resized/car_model/6902/pictures/6212539/mobile_listing_main_Mercedes_Benz_EQC_Logo.png">
+        <h4>The Mercedes-Benz EQC</h4>
+        <button class="btn btn-success" onclick="moreAboutTheMercedesBenzEQC()">More about The Mercedes-Benz EQC</button>
+        <br>
+        <img style="width: 700px; height: 400px;" src="https://ymimg1.b8cdn.com/resized/car_model/6919/logo/slide_show_01.jpg">
+        <h4>Mercedes-Benz A-Class Sedan</h4>
+        <button class="btn btn-success" onclick="moreAboutMercedesBenzAClassSedan()">More about Mercedes-Benz A-Class Sedan</button>
+
+    </body>
+    <script src="showroom.js"></script>
+</html>
